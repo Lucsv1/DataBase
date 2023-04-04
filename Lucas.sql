@@ -14,3 +14,27 @@ DBMS_OUTPUT.PUT_LINE('O VALOR DO  FGTS É: ' || TO_CHAR(V_VALOR));
 END PROC2;
 
 EXEC PROC2();
+
+---------------------------
+
+
+    DECLARE 
+    MINHAEXE EXECEPTION;
+    n        NUMBER := 10;
+    
+    BEGIN
+    FOR i IN &i .. &n LOOP
+    DBMS_OUTPUT.PUT_LINE(i * i );
+    IF i * 2 = 10 THEN
+    RAISE MINHAEXE;
+    
+    END IF;
+    END LOOP;
+    
+    EXCEPTION 
+    WHEN MINHAEXE  THEN 
+    RAISE_APPLICATION_ERROR(-20015, 'Voce caiu na exceção');
+    END;
+
+
+
