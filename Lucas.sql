@@ -797,6 +797,10 @@ ALTER TABLE estado
        ADD CONSTRAINT R_23
               FOREIGN KEY (COD_PAIS)
                              REFERENCES pais  (COD_PAIS);
+                             
+                            
+                            
+                            ooo
 
 
 
